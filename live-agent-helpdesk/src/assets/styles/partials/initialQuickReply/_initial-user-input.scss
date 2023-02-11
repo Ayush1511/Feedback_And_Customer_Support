@@ -1,0 +1,133 @@
+.initialQuickReplyOptionContainer{
+    background-color: rgb(249, 249, 249);
+    margin-bottom: 4px;
+    display: flex;
+    border: 1px solid $outer_grey;
+    height: 56px;
+    }
+    
+    .initialQuickReplyOptionColorBlue{
+      padding-right:8px;
+      background-color:$chat_blue;
+    }
+    
+    .initialQuickReplyOptionColorRed{
+      padding-right:8px;
+      background-color:$chat_red;
+    }
+    
+    .initialQuickReplyOptionArrow{
+        margin-left: auto;
+        margin-right: 10px;
+        margin-top: 18px;
+        /* width: 0px; */
+        font-size: smaller;
+        /* padding-left: 43px; */
+        color: rgb(112, 113, 121);
+    }
+    
+    .initialQuickReplyOptionMessage{
+        margin-left: 14px;
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .initialQuickReplyMenuHeader{
+        background-color: rgb(249, 249, 249);
+        height: 56px;
+    }
+    
+    
+    .initialQuickReplyMenuOrLine{
+    
+    border-bottom: 1px solid black;
+    
+    }
+    hr.initialQuickReplyOrLine{
+        color: $outer_grey;
+    /* size: 23px; */
+    border-top: none;
+    border-left: none;
+    /* height: 13px; */
+    border-right: none;
+    }
+    .initialQuickReplyOrDiv{
+      text-align:center;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+
+      border: solid rgb(238,238,238) 1px;
+      padding: 4px 3px;
+      width: 40px;
+      background-color: rgb(238, 238, 238);
+      margin: auto;
+      border-radius: 9px;
+      color: rgb(65, 65, 78);
+      font-size: 20px;
+    }
+    
+    .initialQuickReplyOrDiv p{
+
+    }
+    
+    .initialQuickReplyMenu{
+      position:relative;
+    }
+    
+    
+    .initialQuickReplyUserInputContainer{
+        margin-left: 14px;
+        margin-right: 14px;
+        /* margin-top: 20px; */
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 1px;
+        background-color: white;
+
+        border-top-right-radius: 4px;
+        color: black;
+    }
+    
+    .initialQuickReplyUserInputHeader{
+        margin-left: 8px;
+        margin-top: 14px;
+        font-family: roboto-bold-webfont;
+        position: absolute;
+        font-size: 17px;
+        left: 8px;
+    }
+    
+    #messageInputInitialQuickReply{
+        width: 87%;
+        background-color: rgb(249, 249, 249);
+        margin-left: 14px;
+        margin-right: 14px;
+        height: 52px;
+        border: solid 1px rgb(241, 241, 241);
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    #sendBtnInitialQuickReply{
+      display:block;
+    }
+
+    .initialQuickReplyFormContainer{
+        top: 134px;
+        width: 93%;
+        margin-left: 14px;
+        margin-right: 14px;
+        position: absolute;
+    }
+    
+
+    .initialQuickReplyOrContainer{
+
+        position: relative;
+        top: 60px;
+        width: 100%;
+    }

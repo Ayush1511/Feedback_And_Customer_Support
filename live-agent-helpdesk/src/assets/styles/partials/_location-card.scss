@@ -1,0 +1,46 @@
+
+.card-store-location {
+    margin: 25px 20px 20px 20px;
+    border: 1px solid;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    width: 270px;
+    border-radius: 1em;
+    box-shadow: 0px 2px 6px rgb(0 0 0 / 10%);
+    font-size: 15px;
+    float: left;
+    flex-shrink: 0;
+    display: block;
+    //background-image: url('../images/location_final.png');
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+  
+  }
+  
+  .card-line {
+    margin-top: 14px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .store-location-card-wrap {
+    display: flex;
+    /* displays flex-items (children) inline */
+    overflow-x: auto;
+  
+  }
+
+
+  .card-store-location-address{
+    margin-top: 14px;
+  }
+  
+
+  .card-store-number p{
+    font-family: roboto-bold-webfont;
+  }
+
+  .card-store-location-address p{
+    font-family: roboto-bold-webfont;
+  }
