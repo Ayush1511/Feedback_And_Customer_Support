@@ -1,0 +1,26 @@
+@-webkit-keyframes opacity-zero {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes opacity-zero {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-webkit-keyframes opacity-one {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes opacity-one {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-webkit-keyframes opacity {
+	0% { opacity: 1; }
+	100% { opacity: 0.6; }
+}
+@-moz-keyframes opacity {
+	0% { opacity: 1; }
+	100% { opacity: 0.6; }
+}

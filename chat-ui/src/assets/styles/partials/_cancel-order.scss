@@ -1,0 +1,15 @@
+.cancel-order-sub-option {
+    display: none;
+  }
+  
+  
+  
+  :checked~.cancel-order-sub-option,
+  :checked~.sub2 {
+  
+    display: block;
+  
+    margin-left: 40px;
+  
+  }
+  

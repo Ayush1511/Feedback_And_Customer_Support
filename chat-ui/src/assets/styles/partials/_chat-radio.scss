@@ -1,0 +1,182 @@
+//  /*Radio btn*/
+
+//  .chat-radio {
+//     margin: 0px 0;
+//     /* display: block; */
+//     cursor: pointer;
+//  }
+//   .chat-radio input[type="radio"] {
+//     position: relative;
+//     left: 1px;
+//     z-index: 15;
+//     top: 37px;
+//     height: 20px;
+//     width: 20px;
+//     opacity: 0;
+//  }
+//   .chat-radio input[type="radio"] + label {
+//     line-height: 22px;
+//     height: 22px;
+//     padding-left: 22px;
+//     display: block;
+//     position: relative;
+//  }
+//   .chat-radio input[type="radio"] + label:not(:empty) {
+//     padding-left: 30px;
+//  }
+//   .chat-radio input[type="radio"] + label:before, .chat-radio input[type="radio"] + label:after {
+//     content: '';
+//     width: 22px;
+//     height: 22px;
+//     display: block;
+//     border-radius: 50%;
+//     left: 0;
+//     top: 0;
+//     position: absolute;
+//  }
+//   .chat-radio input[type="radio"] + label:before {
+//     background: #d1d7e3;
+//     transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+//  }
+//   .chat-radio input[type="radio"] + label:after {
+//     background: #fff;
+//     transform: scale(0.78);
+//     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+//  }
+//   .chat-radio input[type="radio"]:checked + label:before {
+//     transform: scale(1.04);
+//     background: #5d9bfb;
+//  }
+//   .chat-radio input[type="radio"]:checked + label:after {
+//     transform: scale(0.4);
+//     transition: transform 0.3s ease;
+//  }
+//   .chat-radio:hover input[type="radio"] + label:before {
+//     transform: scale(0.92);
+//  }
+//   .chat-radio:hover input[type="radio"] + label:after {
+//     transform: scale(0.74);
+//  }
+//   .chat-radio:hover input[type="radio"]:checked + label:after {
+//     transform: scale(0.4);
+//  }
+
+ .chat-radio {
+   position: relative;
+   width: initial;
+   height: initial;
+   //float: left;
+   margin-bottom: 5px;
+   margin-right: 12px;
+   cursor: pointer;
+   &:last-child {
+     margin-right: 0px;
+   }
+   &:before {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 14px;
+     height: 14px;
+     float: left;
+     content: "";
+     border: 1px solid #7a7a7a;
+     border-radius: 50% 50% 50% 50%;
+     -webkit-border-radius: 50% 50% 50% 50%;
+     -moz-border-radius: 50% 50% 50% 50%;
+     display: none;
+   }
+   input {
+     @include opacity(0);
+   }
+ 
+   i {
+     position: absolute;
+     float: left;
+     left: 3px;
+     top: 3px;
+     width: 9px;
+     height: 9px;
+     background: #e5e5e5;
+     border-radius: 50% 50% 50% 50%;
+     span {
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       width: 9px;
+       height: 9px;
+       background: transparent;
+       @include border-radius(50%, 50%, 50%, 50%);
+       transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%); /* IE 9 */
+       -webkit-transform: translate(-50%, -50%); /* Safari prior 9.0 */
+       -moz-transform: translate(-50%, -50%); /* Standard syntax */
+       z-index: 1;
+     }
+ 
+     &:after {
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%); /* IE 9 */
+       -webkit-transform: translate(-50%, -50%); /* Safari prior 9.0 */
+       -moz-transform: translate(-50%, -50%); /* Standard syntax */
+       width: 14px;
+       height: 14px;
+       float: left;
+       content: "";
+       border: 1px solid #7a7a7a;
+       border-radius: 50% 50% 50% 50%;
+       -webkit-border-radius: 50% 50% 50% 50%;
+       -moz-border-radius: 50% 50% 50% 50%;
+       // transition: all 0.3s linear;
+       background-image: linear-gradient(to top, #ffffff, #ffffff);
+       box-shadow: 0 1px 1px 0 rgba(22, 29, 37, 0.05),
+         inset 0 2px 0 0 rgba(255, 255, 255, 0.05);
+     }
+   }
+ 
+   input:checked + i {
+     span {
+       background: $color-success;
+     }
+     &:after {
+       border: 1px solid $color-success;
+       background: $color-white;
+       box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1),
+         inset 0 2px 0 0 rgba(255, 255, 255, 0.06);
+     }
+   }
+   .labl-txt {
+     margin-left: 9px;
+     color: $color-base;
+     font-size: $fs-16;
+   }
+   input:checked + i + .labl-txt {
+     color: $color-base;
+   }
+ 
+   &.size-large {
+     width: 18px;
+     height: 18px;
+     &:before {
+       width: 14px;
+       height: 14px;
+       border-width: 2px;
+     }
+     i {
+       left: 5px;
+       top: 5px;
+     }
+   }
+ }
+ 
+ @media not all and (min-resolution: 0.001dpcm) {
+   @supports (-webkit-appearance: none) {
+     .radio {
+       top: 2px;
+     }
+   }
+ }
+ 

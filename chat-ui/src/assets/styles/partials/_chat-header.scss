@@ -1,0 +1,22 @@
+.chat-box-header {
+  background: $chat_blue;
+  height: 80px;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: white;
+  /* text-align: center; */
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .chat-box-header p{
+    margin-top: 24px;
+    margin-left: 16px;
+    /* position: absolute; */
+    /* left: 16px; */
+    /* top: 10px; */
+    color: white;
+    width: auto;
+  }
