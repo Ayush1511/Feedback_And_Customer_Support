@@ -29,7 +29,7 @@ public class ChatMessageController {
         List<ChatMessage> chatMessageList = null;
         try {
             chatMessageList = chatMessageService.getChatMessagesList(chatSessionId);
-            log.info("Final Response returned ");
+            log.info("Final Response returned. ");
             return ResponseEntity.ok().body(chatMessageList);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Date format is Incorrect");
