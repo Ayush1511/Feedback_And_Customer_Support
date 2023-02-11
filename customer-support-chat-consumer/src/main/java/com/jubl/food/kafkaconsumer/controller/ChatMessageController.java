@@ -25,7 +25,7 @@ public class ChatMessageController {
     @GetMapping(value = "/chat-messages")
     public ResponseEntity<Object> getChatMessages(@RequestParam(value = "chat_session_id", defaultValue = "") String chatSessionId)
             throws Exception {
-        log.info("Chat Messages data api starts for sessionId: " + chatSessionId);
+        log.info("Chat-Messages data api starts for sessionId: " + chatSessionId);
         List<ChatMessage> chatMessageList = null;
         try {
             chatMessageList = chatMessageService.getChatMessagesList(chatSessionId);
