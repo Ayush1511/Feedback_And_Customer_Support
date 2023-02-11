@@ -1,0 +1,53 @@
+@use "sass:math";
+
+@mixin fontFace($family, $weight, $style) {
+  @font-face {
+    font-family: $family;
+    font-display: swap;
+
+    src: url("#{$global-font-path}#{$family}.eot"); // IE9 compat
+    src: url("#{$global-font-path}#{$family}.eot?#iefix") format('embedded-opentype'),
+      format("embedded-opentype"); // IE8 and below
+    src: url("#{$global-font-path}#{$family}.woff") format("woff"),
+      // standards
+      url("#{$global-font-path}#{$family}.woff2") format("woff2"),
+      url("#{$global-font-path}#{$family}.ttf") format("truetype"); // Safari, Android, iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin fontFaceFontello($family, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-display: swap;
+
+    src: url("#{$fonts-folder-path}#{$font-path-font-icon}#{$family}.eot?#{$font-version-fontello}"); // IE9 compat
+    src: url("#{$fonts-folder-path}#{$font-path-font-icon}#{$family}.eot?#{$font-version-fontello}#iefix")
+      format("embedded-opentype"); // IE8 and below
+    src: url("#{$fonts-folder-path}#{$font-path-font-icon}#{$family}.woff?#{$font-version-fontello}")
+        format("woff"),
+      // standards
+      url("#{$fonts-folder-path}#{$font-path-font-icon}#{$family}.ttf?#{$font-version-fontello}")
+        format("truetype"),
+      // Safari, Android, iOS
+      url("#{$fonts-folder-path}#{$font-path-font-icon}#{$family}.svg?#{$font-version-fontello}##{$family}")
+        format("svg"); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin font($value, $type: normal) {
+  @if $type == bold {
+    font: (math.div($value, $font-size)) + em $font-family-bold;
+  } @else if $type == medium {
+    font: (math.div($value, $font-size)) + em $font-family-medium;
+  } @else if $type == light {
+    // font: (math.div($value, $font-size)) + em $font-family-light;
+  } @else {
+    font-size: (math.div($value, $font-size)) + em;
+  }
+}

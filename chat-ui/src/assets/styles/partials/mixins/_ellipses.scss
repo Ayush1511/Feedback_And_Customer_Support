@@ -1,0 +1,71 @@
+@mixin my-ellipsis($paddingRight: 0px) {
+  overflow: hidden;
+  padding-right: $paddingRight;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include my-screen(medium) {
+    overflow: visible;
+    text-overflow: inherit;
+    white-space: normal;
+  }
+}
+
+@mixin three-dot {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin multiple-line-ellipse(
+  $lineHeight: 16px,
+  $maxLines: 2,
+  $bgColorAfter: #fff
+) {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: $lineHeight;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: calc($lineHeight * $maxLines);
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+
+  /* */
+  padding-right: $lineHeight;
+  &:before {
+    /* points in the end */
+    content: "...";
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    /* points in the end */
+    content: "";
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of text */
+    right: 0;
+    width: 1em;
+    /* set width and height */
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColorAfter;
+  }
+}
+
+
+@mixin multiple-line-ellipse-v2(
+  $maxLines: 2
+) {
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $maxLines;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
