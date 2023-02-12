@@ -1,0 +1,15 @@
+@mixin rotate($deg:180deg) {
+	 -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin translate($left:50%, $top:50%){
+	-webkit-transform:translate($left, $top);
+  	-moz-transform:translate($left, $top);
+  	-o-transform:translate($left, $top);
+  	-ms-transform:translate($left, $top);
+ 	transform:translate($left, $top);
+}

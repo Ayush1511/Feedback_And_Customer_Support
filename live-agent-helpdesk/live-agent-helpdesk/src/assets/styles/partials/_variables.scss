@@ -1,0 +1,183 @@
+@use "sass:math";
+
+// =================================
+// ALL COLORS
+// =================================
+$white: #fff;
+$light_white: #f1f6ff;
+$black: #2e2e2e;
+$grey: #a4a2b5;
+$red: #e31837;
+$red_hover: #d40525;
+$green: #38af00;
+$yellow: #FFFD82;
+$primary: rgb(48,114,165);
+$chat_blue: $primary;
+$secondary: rgb(203,43,52);
+$chat_red: $secondary;
+$outer_grey: rgb(236,235,235);
+$inner_grey: rgb(209,209,209);
+
+
+
+
+
+/**
+Variables defined here are common to 
+pages (home, srp, ... ) in a particular THEME in a particular COUNTRY.
+**/
+
+$product-country: "srilankla";
+$product-theme: "theme-b";
+
+/* Color Variables */
+$color-primary: #e31837;
+$color-primary-active: #cf0f2c; // 2 tone darker of $color-primary
+
+$color-secondary: #005491;
+$color-secondary-active: #00003c; // 2 tone darker of $color-secondary
+
+$body-base: #fff !default;
+$color-body-bg: #fff !default;
+$color-base: #2e2e2e !default;
+$color-text: $color-base;
+$color-white: #fff !default;
+$color-black: #000 !default;
+
+$color-link: $color-secondary !default;
+$color-link-hover: $color-secondary-active !default;
+
+$color-grey: #7a7a7a;
+$color-slaty: #666666;
+$color-grey-light: #999999;
+$color-error: #e31837;
+$color-success: #38af00;
+$color-green: $color-success;
+$color-highlighter: #00ffe0;
+
+$color-border: #dddddd;
+$color-border-focus: #888888; // 2 tone darker of $color-border
+$color-border-active: #888888;
+
+$color-fb: #3b5998;
+$color-twitter: #55acee;
+$color-link-blue: #4a90e2;
+
+/* checkbox, radio Variables */
+$checkbox-border: $color-border;
+$checkbox-bg: #f5f5f5;
+$checkbox-tick-bg: $color-border;
+$checkbox-active-bg: transparent;
+$radio-bg: #e5e5e5;
+$radio-active-bg: $color-border-active;
+
+/* tipsy Variables */
+$tipsy-drak-blue-bg: $color-secondary;
+$tipsy-color: #e4e4e4;
+
+/* overlay Variables */
+$overlay-bg: rgba(11, 11, 11, 0.5);
+$overlay-header-color: $color-base;
+
+/* btn Variables */
+$action-btn-bg: $color-primary;
+$action-btn-border: $color-primary;
+$action-btn-color: $color-white;
+
+$action-btn-bg-hover: $color-primary-active;
+$action-btn-border-hover: $color-primary;
+$action-btn-color-hover: $color-white;
+
+
+// =================================
+// COLORS PALETTE
+// =================================
+$color_white: $white;
+$color_body: $black;
+$color_grey: $grey;
+$color_theme: $red;
+$color_theme_dark: $red_hover;
+$color_error: $red;
+$color_warning: $yellow;
+$color_info: $green;
+$color_success: $green;
+
+
+// =================================
+// GLOBALS VARS
+// =================================
+
+$body_margin: 0;
+$body_bg_color: $light_white;
+// -------- Borders
+$border_radius: 5px;
+
+
+
+// -------- Default Links
+
+
+// =================================
+// TYPOGRAPHY VARS
+// =================================
+
+// FONTS
+// **************************
+
+/** Font Icons **/
+$fonts-folder-path: "../src/assets/fonts/";
+$global-font-path: "#{$fonts-folder-path}global/";
+$fonticon-prefix: "jfi";
+/** eof Font Icons **/
+
+/** Fonts **/
+$font-family-default: "roboto-regular-webfont";
+$font-family-base: "#{$font-family-default}", "Arial, Helvetica, sans-serif" !default; // 400
+$font-family-medium: "roboto-medium-webfont"; // 500
+$font-family-bold: "roboto-bold-webfont"; // 700
+
+$font-family-rs: "RupeeSign" !default;
+$font-family-fontello: "fontello";
+
+$font-size: 12;
+$font-size-base: 12px; // 12px
+$font-size-xs: 0.75em !default; // 9px
+$font-size-sm: 0.833em !default; // 10px
+$font-size-md: 1.167em !default; // 14px
+$font-size-lg: 1.333em !default; // 16px
+$font-size-xlg: 1.5em !default; // 18px
+$fs-8: 0.667em; //8px
+$fs-9: $font-size-xs; //9px
+$fs-10: $font-size-sm; //10px
+$fs-11: 0.917em; //11px
+$fs-12: $font-size-base; //12px
+$fs-13: 1.083em; //13px
+$fs-14: $font-size-md; //14px
+$fs-15: 1.25em; //15px
+$fs-16: $font-size-lg; //16px
+$fs-17: 1.417em; //17px
+$fs-18: $font-size-xlg; //18px
+$fs-19: 1.583em; //19px
+$fs-20: 1.667em; //20px
+$fs-22: 1.833em; //22px
+$fs-24: 2em; //24px
+
+/** eof Fonts **/
+
+
+// ---- Font sizes
+$fs_14: 14px;
+$fs_16: 16px;
+
+
+// LISTS
+
+
+// HEADLINES
+
+
+// ----- H1
+
+// FORMS
+
+

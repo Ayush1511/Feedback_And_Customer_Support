@@ -1,0 +1,22 @@
+
+.wrong-order-sub-option {
+    display: none;
+  }
+  
+  
+  
+  :checked~.wrong-order-sub-option,
+  :checked~.sub2 {
+  
+    display: block;
+  
+    margin-left: 40px;
+  
+  }
+
+  #wrong-opt-submit-btn{
+    // margin-left:20px;
+    // margin-top:20px;
+    // margin-bottom: 20px;
+  }
+  

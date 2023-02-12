@@ -1,0 +1,87 @@
+@mixin clearfix {
+	clear: both;
+	&:before,
+	&:after {
+		clear: both;
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+
+@mixin full(){
+	width:100%;
+	float:left;
+}
+
+@mixin posFix($type:''){
+	position:fixed !important;
+	z-index:9999;
+	@if $type == top-right {
+		top:0 !important;
+		right:0 !important;
+	}@else if $type == bottom-left {
+		bottom:0 !important;
+		left:0 !important;
+	}@else if $type == bottom-right {
+		bottom:0 !important;
+		right:0 !important;
+	}@else {
+		top:0 !important;
+		left:0 !important;
+	}
+}
+
+@mixin clearit {
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+   zoom: 1;
+}
+
+@mixin translateY($top){
+	-webkit-transform:translateY($top);
+	  -moz-transform:translateY($top);
+	  -o-transform:translateY($top);
+	  -ms-transform:translateY($top);
+	 transform:translateY($top);
+ }
+ @mixin translateX($left){
+	-webkit-transform:translateX($left);
+	  -moz-transform:translateX($left);
+	  -o-transform:translateX($left);
+	  -ms-transform:translateX($left);
+	 transform:translateX($left);
+ }
+
+ @mixin triangle($bT, $bR, $bB, $bL, $colorT, $colorR, $colorB,  $colorL){
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: $bT $bR $bB $bL;
+	border-color: $colorT $colorR $colorB  $colorL;
+}
+
+@mixin heading($fm:$font-family-default, $fs:$fs-16, $color:$color-base){
+	font-family: $fm;
+	font-size: $fs;
+	color: $color;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
+}
+
+
+

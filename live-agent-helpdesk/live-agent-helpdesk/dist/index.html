@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Live Agent Helpdesk</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="css" href="/src/assets/styles/app.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><script defer src="/live-agent-helpdesk//main.js?b49feed0f459dd994630"></script><link href="/live-agent-helpdesk//main.css.css?b49feed0f459dd994630" rel="stylesheet"><link href="/live-agent-helpdesk//main.css?b49feed0f459dd994630" rel="stylesheet"></head>
+
+<body>
+    <div class="login-form">
+        <form class="helpdesk-login-form">
+          <h1>Login</h1>
+          <div class="content">
+            <div class="input-field">
+              <input type="email" id="input-field-email" placeholder="Email" autocomplete="nope">
+            </div>
+            <div class="input-field">
+              <input type="password" id="input-field-password" placeholder="Password" autocomplete="new-password">
+            </div>
+            <!-- <a href="#" class="link">Forgot Your Password?</a> -->
+          </div>
+          <div class="action">
+            <!-- <button>Register</button> -->
+            <button>Sign in</button>
+          </div>
+        </form>
+    </div>
+
+    <div id="appContainer" class="flex-column"  style="display: none;">
+
+
+		<div class="chat-box-header">
+			<p class="chat-box-header-title">JFL Dominos Helpdesk</p>
+            <button id="conversationEndBtn"><i class="fa fa-ban"></i></button>
+			<button id="closeChatBtn">&#215</button>
+		</div>
+
+
+		<div id="mainContent" class="container flex-grow-1 flex-column ">
+
+			<div id="chat" class="flex-grow-1 flex-column">
+				<div id="messagesList" class="flex-grow-1">
+
+				</div>
+
+			</div>
+		</div>
+		<div class="chat-input">
+			<div id="quickReplyTab"></div>
+			<div class="customer-info-wrap"></div>
+			<form id="messageForm" class="flex">
+                <!-- <button id="statusBtn"><i class="fa fa-ban"></i></button> -->
+				<input type="text" name="message " id="messageInput" class="flex-grow-1"
+					placeholder="type here...">
+				<button id="sendBtn"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			</form>
+		</div>
+
+
+	</div>
+	
+    <div class="chat-popup-button-container" style="display: none;">
+		<button id="chat-popup-btn">
+			<img src="./src/assets/images/chat-icon-bg-circle.png" alt="default">
+		</button>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"
+		integrity="sha512-/xb5+PNOA079FJkngKI2jvID5lyiqdHXaUUcfmzE0X0BdpkgzIWHC59LOG90a2jDcOyRsd1luOr24UCCAG8NNw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./src/main.js " async></script>
+</body>
+
+</html>

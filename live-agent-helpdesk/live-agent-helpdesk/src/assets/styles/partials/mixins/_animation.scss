@@ -1,0 +1,7 @@
+@mixin animation($class, $delay, $name) {
+	.#{$class} {
+		-webkit-transition:all #{$delay} #{$name};
+	    -moz-transition:all #{$delay} #{$name};
+	    transition:all #{$delay} #{$name};
+	}
+}
