@@ -1,0 +1,20 @@
+@mixin prefix($property, $value, $vendors: webkit moz ms o, $default: true) {
+  @if $vendors {
+    @if ($property == "linear-gradient") {
+      @each $vendor in $vendors {
+        background: #{"-" + $vendor + "-" + $property }($value);
+      }
+    } @else {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $property}: #{$value};
+      }
+    }
+  }
+  @if $default {
+    @if ($property == "linear-gradient") {
+      background: #{$property }($value);
+    } @else {
+      #{$property}: #{$value};
+    }
+  }
+}

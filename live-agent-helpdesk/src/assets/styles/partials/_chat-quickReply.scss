@@ -1,0 +1,34 @@
+.quick-reply-btn-container{
+    margin-bottom: 30px;
+      /* align-items: center; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  
+  .quick-reply-btn{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    border: 0;
+  }
+  .quick-reply-btn-red{
+    background-color: $chat_red;
+  }
+  .quick-reply-btn-blue{
+    background-color: $chat_blue;
+  }
+  
+  #quickReplyTab{
+    position: absolute;
+    bottom: 68px;
+    left: 0px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgb(0 0 0 / 18%);
+  }

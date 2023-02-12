@@ -1,0 +1,24 @@
+@mixin create-font-icon($position, $styles) {
+  @if $position == both {
+    $position: "before, &:after";
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $styles {
+      // Supportive icon styles required
+      display: inline-block;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-family: "#{$font-family-fontello}";
+
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+    }
+    // Include any extra rules supplied for the pseudo-element
+    @content;
+  }
+}
