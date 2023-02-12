@@ -1,0 +1,41 @@
+@mixin my-screen($media) {
+	@if $media == very-small {
+		@media only screen and (max-width: $screen-xs) {
+			@content;
+		}
+	}@else if $media == small {
+		@media only screen and (max-width: $screen-sm) {
+			@content;
+		}
+	}@else if $media == medium {
+		@media only screen and (max-width: $screen-md) {
+			@content;
+		}
+	}@else if $media == large {
+		@media only screen and (max-width: $screen-lg) {
+			@content;
+		}
+	}
+	@else if $media == extra-large {
+		@media only screen and (max-width: $screen-xlg) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (max-width: $media) {
+			@content;
+		}
+	}
+}
+
+@mixin visible-screen($media1, $media2){
+    @media (min-width: ($media1 + 1)) and (max-width: $media2) {
+        @content;
+    }
+}
+
+@mixin screen($width) {
+	@media only screen and (max-width: $width) {
+		@content;
+	}
+}

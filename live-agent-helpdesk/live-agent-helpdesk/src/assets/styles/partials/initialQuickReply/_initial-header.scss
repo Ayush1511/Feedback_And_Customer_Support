@@ -1,0 +1,46 @@
+.chat-box-header-dominos-logo-initial{
+    margin-top: 20px;
+    margin-left: 14px;
+    margin-right: 14px;
+    background-color: white;
+    padding: 5px;
+    position: relative;
+    top: 1px;
+    z-index: 9;
+}
+
+.chat-box-header-initial p{
+  margin-top: 24px;
+  margin-left: 10px;
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  color: white;
+  width: auto;
+  /* font-style: oblique;*/
+  }
+
+  .chat-box-header-initial {
+    background: $chat_blue;
+    height: 80px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .chat-box-header-initial-title {
+    background: $chat_blue;
+    height: 80px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    top: -1px;
+    display: flex;
+  }

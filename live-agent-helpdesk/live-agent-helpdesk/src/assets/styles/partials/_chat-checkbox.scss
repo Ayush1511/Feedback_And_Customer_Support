@@ -1,0 +1,197 @@
+// .chat-checkbox input[type="checkbox"] {
+//     opacity: 0;
+//   left: 1px;
+//   right: 0px;
+//   top: 6px;
+//   height: 22px;
+//   width: 27px;
+//   position: relative;
+//   z-index: 1;
+// }
+
+// .chat-checkbox label {
+//     position: relative;
+//     display: inline-block;
+    
+//     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+//     padding-left: 22px;
+// }
+
+// .chat-checkbox label::before,
+// .chat-checkbox label::after {
+//     position: absolute;
+//     content: "";
+    
+//     /*Needed for the line-height to take effect*/
+//     display: inline-block;
+// }
+
+// /*Outer box of the fake checkbox*/
+// .chat-checkbox label::before{
+//   height: 16px;
+//   width: 16px;
+//   border: 1px solid;
+//   left: -29px;
+//   /* top: 11px; */
+//   background-color: #fc9fd4;
+//   top: 1px;
+// }
+
+// /*Checkmark of the fake checkbox*/
+// .chat-checkbox label::after {
+//     height: 5px;
+//     width: 9px;
+//     border-left: 2px solid;
+//     border-bottom: 2px solid;
+    
+//     transform: rotate(-45deg);
+    
+//     content: "";
+//     left: -26px;
+//     top: 6px;
+// }
+
+// /*Hide the checkmark by default*/
+// .chat-checkbox input[type="checkbox"] + label::after {
+//     content: none;
+// }
+
+// /*Unhide on the checked state*/
+// .chat-checkbox input[type="checkbox"]:checked + label::after {
+//     content: "";
+// }
+
+// /*Adding focus styles on the outer-box of the fake checkbox*/
+// .chat-checkbox input[type="checkbox"]:focus + label::before {
+//     outline: rgb(245, 61, 164) auto 5px;
+// }
+
+
+
+.chat-checkbox {
+    // float: left;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    position: relative;
+    background: $color-white;
+    border: none;
+    @include border-radius(2px, 2px, 2px, 2px);
+  
+    .ico-check,
+    .icon-check {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      height: 10px;
+      width: 16px;
+      margin: -5px 0 0 -8px;
+      @include opacity(0);
+      @extend .transition;
+  
+      &:before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        float: left;
+        margin: -5px 0 0 -8px;
+        z-index: 1;
+      }
+  
+      &:after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: -4px;
+        float: left;
+        margin: 0;
+        background-color: $color-success;
+        width: 16px;
+        height: 16px;
+        z-index: 0;
+        border-radius: 2px;
+        border: 2px solid transparent;
+      }
+  
+      &.ytfi-ok {
+        &:before {
+          color: $color-white;
+          top: -3px;
+          left: 3px;
+          margin: 0 !important;
+          font-size: 12px;
+        }
+      }
+    }
+  
+    .icon-check {
+      &:before {
+        margin: -7px 0 0 -3px;
+        height: 9px;
+        width: 4px;
+        border: solid red;
+        border-width: 0px 2px 2px 0px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        display: block;
+        background: none !important;
+      }
+    }
+  
+    input[type="checkbox"] {
+      @include opacity(0);
+    }
+  
+    input[type="checkbox"]:checked + .ico-check,
+    input[type="checkbox"]:checked + .icon-check {
+      @include opacity(1);
+    }
+  
+    &.disabled {
+      @include opacity(0.5);
+    }
+  
+    &.checked {
+      .ico-check,
+      .icon-check {
+        @include opacity(1);
+      }
+    }
+  
+    input[type="checkbox"] {
+      z-index: 1;
+      position: relative;
+      background: transparent;
+      line-height: 16px;
+      & + i {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #7a7a7a;
+        @include border-radius(3px, 3px, 3px, 3px);
+      }
+      &:checked + i {
+        @include border-radius(3px, 3px, 3px, 3px);
+        border: 1px solid $color-success;
+        background: $color-success;
+        display: block;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 8px;
+          top: 1px;
+          left: 4px;
+          border-right: 2px solid $color-white;
+          border-bottom: 2px solid $color-white;
+          @include rotate(45deg);
+        }
+      }
+    }
+  }
+  

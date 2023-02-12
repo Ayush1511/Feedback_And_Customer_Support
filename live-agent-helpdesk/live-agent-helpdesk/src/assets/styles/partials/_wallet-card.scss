@@ -1,0 +1,30 @@
+.wallet-wrapper {
+    margin: 10px;
+    border: 1px solid black;
+    max-width: 500px;
+}
+
+.wallet-body {
+    background: linear-gradient(136.69deg, rgb(0, 159, 211) -5.75%, rgb(0, 102, 167) 101.29%);
+}
+
+.wallet-point {
+    color: white;
+    padding: 16px;
+}
+
+.wallet-table {
+    width: 100%;
+    background-color: rgba(216, 216, 216, 0.26);
+}
+
+.wallet-points {
+    text-align: right;
+    padding: 10px;
+}
+
+.wallet-no-history {
+    background-color: rgba(216, 216, 216, 0.26);
+    padding: 10px;
+    min-height: 20px;
+}
