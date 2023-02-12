@@ -12,7 +12,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "conversations")
+@Document(collection = "CustomerSupportUserConversations")
 public class ChatMessageResponse {
 
     private String sender_id;
